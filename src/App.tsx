@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './index.css'
 
 /* ── Types ───────────────────────────────── */
@@ -44,12 +44,12 @@ const WORKS: WorkItem[] = [
   { id:206, title:'Family Record', category:'film-digital', src:'/images/works/family-picnic.jpg', height:'460px', labelEn:'Film / Digital' },
 ]
 
-const FILTERS: { key: Filter; label: string }[] = [
-  { key: 'all',          label: 'All Works' },
-  { key: 'wet-plate',    label: 'Wet Plate' },
-  { key: 'portrait',     label: 'Portrait' },
-  { key: 'film-digital', label: 'Film / Digital' },
-]
+// const FILTERS: { key: Filter; label: string }[] = [
+//   { key: 'all',          label: 'All Works' },
+//   { key: 'wet-plate',    label: 'Wet Plate' },
+//   { key: 'portrait',     label: 'Portrait' },
+//   { key: 'film-digital', label: 'Film / Digital' },
+// ]
 
 /* ── Theme hook ──────────────────────────── */
 function useTheme() {
@@ -237,9 +237,9 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
 }
 
 /* ── Works ───────────────────────────────── */
-function Works({ activeFilter, setActiveFilter }: {
+function Works({ activeFilter }: {
   activeFilter: Filter
-  setActiveFilter: (f: Filter) => void
+  setActiveFilter?: (f: Filter) => void
 }) {
   const [lightbox, setLightbox] = useState<WorkItem | null>(null)
 
