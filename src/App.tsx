@@ -398,7 +398,7 @@ function Projects() {
           <ProjectCard num="P.02" label="Series / シリーズ" title="The Wolf Series"
             desc="「狼」の不在と気配を追いかけるアートワーク。見えざる物語と深い沈黙を写し出すコア作品群。" imgSrc="/images/wolf/wolf2.jpg" />
           <ProjectCard num="P.03" label="Collaboration / 共同制作" title="108 Pieces Project" cls="img-ph-2"
-            desc="現代美術作家・小枝繁昭氏のライフワークプロジェクト、108人のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試み。（2026年〜）" comingSoon />
+            desc="現代美術作家・小枝繁昭氏のライフワークプロジェクト、108人のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試み。（2026年〜）" />
           <ProjectCard num="P.04" label="Archive / アーカイブ" title="まどにうつす" cls="img-ph-3"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" />
         </div>
