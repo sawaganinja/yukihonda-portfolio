@@ -250,8 +250,8 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
               <div className="menu-box">
                 <p className="menu-box__label">サポート メニュー</p>
                 {[
-                  { name:'オンライン相談セッション (1h)', note:'国内での資材調達、機材選定、導入プロセスなどの事前セッション', price:'¥5,000' },
-                  { name:'プロジェクトサポート', note:'要相談', price:'お打ち合わせ後に見積もり' },
+                  { name:'初回オンラインセッション', note:'初回1時間の相談を含むセッションを行います。お問い合わせはメールでご連絡ください。', price:'¥5,000' },
+                  { name:'プロジェクトサポート', note:'要相談', price:'初回オンラインセッション後にお見積もり' },
                 ].map(item => (
                   <div className="menu-row" key={item.name}>
                     <div>
