@@ -231,14 +231,15 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
             >Follow on Instagram →</a>
           </div>
 
-          {/* Technical Support */}
+          {/* Wet Plate Support */}
           <div className="service-card service-card--wide">
             <div>
               <div className="service-card__num">04</div>
-              <h3 className="service-card__title">Technical Support & Logistics</h3>
-              <p className="service-card__sub">古典技法を用いたプロジェクトの立ち上げをトータルで伴走・サポートします。</p>
+              <h3 className="service-card__title">Wet Plate Support</h3>
+              <p className="service-card__sub">湿板写真の導入・制作コンサルティング</p>
               <p className="service-card__desc">
-                国内外のアーティスト、研究機関、ギャラリー向けの湿板写真制作・導入支援。調合技術の指導、暗室設計、材料手配から、環境に配慮した適切な廃液管理まで対応します。
+                国内外の写真家、アーティスト、研究機関向けに、湿板写真を用いたプロジェクトの立ち上げをトータルで伴走・サポートします。撮影や調合の技術指導、独自の表現を追求するための暗室設計や機材選定のアドバイスなど、それぞれのビジョンに合わせた安全な運用をサポートします。<br /><br />
+                写真館の新たなメニューとして湿板写真の導入を検討されている方も、お気軽にお問い合わせください。
               </p>
               <div className="service-card__tags">
                 <span className="service-tag">B2B</span>
