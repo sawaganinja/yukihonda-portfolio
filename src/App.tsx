@@ -230,6 +230,79 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color='var(--text-dim)'; (e.currentTarget as HTMLAnchorElement).style.borderColor='var(--border-hov)' }}
             >Follow on Instagram →</a>
           </div>
+
+          {/* Wet Plate Portrait */}
+          <div className="service-card service-card--wide">
+            <div>
+              <div className="service-card__num">04</div>
+              <h3 className="service-card__title">Wet Plate Portrait</h3>
+              <p className="service-card__sub">170年前の技法が、あなたの「気配」をガラスに封じ込める。</p>
+              <p className="service-card__desc">
+                撮影現場でガラス板に薬品を塗り、その場で感光材を手作りする。170年前と変わらない化学反応が起き、銀の粒子があなたの像を永遠に定着させます。婚礼の誓い、家族の今、あるいは人生の決意の節目に。100年先へ手渡すための、世界にひとつだけの物質としての肖像。
+              </p>
+              <div className="service-card__tags">
+                <span className="service-tag">Wet-plate</span>
+                <span className="service-tag">Portrait</span>
+              </div>
+              <button className="view-work-link" onClick={() => goto('wet-plate')}>
+                View Wet Plate Work →
+              </button>
+            </div>
+            <div className="service-card__right">
+              <div className="menu-box">
+                <p className="menu-box__label">Wet Plate メニュー</p>
+                {[
+                  { name:'S Size (四切)', note:'ガラス原版1枚の手渡し', price:'¥50,000〜' },
+                  { name:'M Size (半切)', note:'ガラス原版1枚の手渡し', price:'¥80,000〜' },
+                  { name:'L Size (全紙)', note:'ガラス原版1枚の手渡し', price:'¥100,000〜' },
+                ].map(item => (
+                  <div className="menu-row" key={item.name}>
+                    <div>
+                      <p className="menu-row__name">{item.name}</p>
+                      <p className="menu-row__note">{item.note}</p>
+                    </div>
+                    <p className="menu-row__price">{item.price}</p>
+                  </div>
+                ))}
+                <p className="menu-note">
+                  ※ データ納品なし。正方形フォーマット統一。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Technical Support */}
+          <div className="service-card service-card--wide">
+            <div>
+              <div className="service-card__num">05</div>
+              <h3 className="service-card__title">Technical Support & Logistics</h3>
+              <p className="service-card__sub">古典技法を用いたプロジェクトの立ち上げをトータルで伴走・サポートします。</p>
+              <p className="service-card__desc">
+                国内外のアーティスト、研究機関、ギャラリー向けの湿板写真制作・導入支援。調合技術の指導、暗室設計、材料手配から、環境に配慮した適切な廃液管理まで対応します。
+              </p>
+              <div className="service-card__tags">
+                <span className="service-tag">B2B</span>
+                <span className="service-tag">Support</span>
+              </div>
+            </div>
+            <div className="service-card__right">
+              <div className="menu-box">
+                <p className="menu-box__label">サポート メニュー</p>
+                {[
+                  { name:'オンライン相談セッション (1h)', note:'国内での資材調達、機材選定、導入プロセスなどの事前セッション', price:'¥5,000' },
+                  { name:'プロジェクトサポート', note:'要相談 / 個別見積もり', price:'¥300,000〜' },
+                ].map(item => (
+                  <div className="menu-row" key={item.name}>
+                    <div>
+                      <p className="menu-row__name">{item.name}</p>
+                      <p className="menu-row__note">{item.note}</p>
+                    </div>
+                    <p className="menu-row__price">{item.price}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
