@@ -17,8 +17,8 @@ interface WorkItem {
 /* ── Works data ── */
 const WORKS: WorkItem[] = [
   { id:101, title:'まどにうつす', category:'wet-plate', src:'/images/works/ohara-landscape.jpg', height:'380px', labelEn:'8×10 Wet Plate (2022)' },
-  { id:102, title:'Boy on Tatami', category:'portrait', src:'/images/works/boy-portrait.jpg', height:'420px', labelEn:'Portrait' },
-  { id:103, title:'Skateboard', category:'wet-plate', src:'/images/works/skateboard.jpg', height:'380px', labelEn:'Wet Plate' },
+  { id:102, title:'Boy on Tatami', category:'portrait', src:'/images/works/boy-portrait.jpg', height:'420px', labelEn:'140×140mm Wet Plate (2026)' },
+  { id:103, title:'Skateboard', category:'wet-plate', src:'/images/works/skateboard.jpg', height:'380px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:2, title:'Portrait of an Artist', category:'wet-plate', src:'/images/works/work4.jpg', height:'420px', labelEn:'Wet Plate' },
   { id:3, title:'Forest Portrait', category:'film-digital', src:'/images/works/work13.jpg', height:'400px', labelEn:'Film / Digital' },
   { id:4, title:'Kyoto Street', category:'wet-plate', src:'/images/works/work1.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
