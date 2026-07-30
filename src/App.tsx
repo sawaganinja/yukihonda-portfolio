@@ -348,11 +348,14 @@ function Works({ activeFilter }: {
 }
 
 /* ── Projects ────────────────────────────── */
-function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc }: {
-  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string
+function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc, href }: {
+  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string; href?:string
 }) {
+  const CardWrapper = href ? 'a' : 'article';
+  const linkProps = href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {};
+
   return (
-    <article className="project-card">
+    <CardWrapper className={`project-card ${href ? 'is-link' : ''}`} {...linkProps}>
       <div className={`project-card__img ${cls || ''}`} style={imgSrc ? { backgroundImage: `url(${imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}>
         {!imgSrc && (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -374,7 +377,7 @@ function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc }: {
         </div>
       )}
       <span style={{ position:'absolute',top:'1.2rem',left:'1.2rem',fontSize:'.6rem',color:'rgba(240,237,232,.15)',letterSpacing:'.1em' }}>{num}</span>
-    </article>
+    </CardWrapper>
   )
 }
 
@@ -397,7 +400,7 @@ function Projects() {
           <ProjectCard num="P.03" label="Collaboration / 共同制作" title="Artist Collaboration Series" cls="img-ph-2"
             desc="現代美術作家・小枝繁昭氏のライフワークプロジェクト、108人のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試み。（2026年〜）" />
           <ProjectCard num="P.04" label="Archive / アーカイブ" title="まどにうつす"
-            desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" />
+            desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
         </div>
       </div>
     </section>
