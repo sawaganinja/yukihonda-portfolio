@@ -20,25 +20,25 @@ const WORKS: WorkItem[] = [
   { id:102, title:'Boy on Tatami', category:'portrait', src:'/images/works/boy-portrait.jpg', height:'420px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:103, title:'Skateboard', category:'wet-plate', src:'/images/works/skateboard.jpg', height:'380px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:2, title:'Portrait of an Artist', category:'wet-plate', src:'/images/works/work4.jpg', height:'420px', labelEn:'Wet Plate' },
-  { id:3, title:'Forest Portrait', category:'film-digital', src:'/images/works/work13.jpg', height:'400px', labelEn:'Film / Digital' },
+  { id:3, title:'Forest Portrait', category:'film-digital', src:'/images/works/work13.jpg', height:'400px', labelEn:'Film' },
   { id:4, title:'Kyoto Street', category:'wet-plate', src:'/images/works/work1.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:201, title:'Family Record', category:'film-digital', src:'/images/works/family-silhouette.jpg', height:'360px', labelEn:'Film / Digital' },
-  { id:5, title:'Boy in a Field', category:'portrait', src:'/images/works/work11.jpg', height:'380px', labelEn:'Portrait' },
+  { id:201, title:'Family Record', category:'film-digital', src:'/images/works/family-silhouette.jpg', height:'360px', labelEn:'Film' },
+  { id:5, title:'Boy in a Field', category:'portrait', src:'/images/works/work11.jpg', height:'380px', labelEn:'Digital' },
   { id:6, title:'Landscape Study', category:'wet-plate', src:'/images/works/work2.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:202, title:'Family Record', category:'film-digital', src:'/images/works/family-onbu.jpg', height:'380px', labelEn:'Film / Digital' },
+  { id:202, title:'Family Record', category:'film-digital', src:'/images/works/family-onbu.jpg', height:'380px', labelEn:'Film' },
   { id:11, title:'Portrait of a Boy', category:'portrait', src:'/images/works/work6.jpg', height:'400px', labelEn:'8×10 Wet Plate (2025)' },
   { id:8, title:'Canal and Bridge', category:'wet-plate', src:'/images/works/work7.jpg', height:'360px', labelEn:'8×10 Wet Plate (2025)' },
   { id:9, title:'Modernity', category:'wet-plate', src:'/images/works/work3.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film / Digital' },
-  { id:10, title:'In the Field', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film / Digital' },
+  { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film' },
+  { id:10, title:'Spring by the Canal', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film' },
 
   { id:12, title:'Garden Elements', category:'wet-plate', src:'/images/works/work5.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:13, title:'Workspace', category:'wet-plate', src:'/images/works/work8.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:204, title:'Family Record', category:'film-digital', src:'/images/works/family-water.jpg', height:'380px', labelEn:'Film / Digital' },
+  { id:204, title:'Family Record', category:'film-digital', src:'/images/works/family-water.jpg', height:'380px', labelEn:'Film' },
   { id:14, title:'Portrait of a Girl', category:'wet-plate', src:'/images/works/work9.jpg', height:'420px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:205, title:'Family Record', category:'film-digital', src:'/images/works/family-look.jpg', height:'380px', labelEn:'Film / Digital' },
+  { id:205, title:'Family Record', category:'film-digital', src:'/images/works/family-look.jpg', height:'380px', labelEn:'Film' },
   { id:15, title:'Village Road', category:'wet-plate', src:'/images/works/work10.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:206, title:'Family Record', category:'film-digital', src:'/images/works/family-picnic.jpg', height:'460px', labelEn:'Film / Digital' },
+  { id:206, title:'Family Record', category:'film-digital', src:'/images/works/family-picnic.jpg', height:'460px', labelEn:'Film' },
 ]
 
 // const FILTERS: { key: Filter; label: string }[] = [
@@ -397,8 +397,10 @@ function Projects() {
             desc="正方形の湿板写真。起業家・経営者のアイデンティティをガラスと金属に焼き付ける、唯一無二のハイエンド商材。" comingSoon />
           <ProjectCard num="P.02" label="Series / シリーズ" title="The Wolf Series"
             desc="「狼」の不在と気配を追いかけるアートワーク。見えざる物語と深い沈黙を写し出すコア作品群。（2023年〜）" imgSrc="/images/wolf/wolf2.jpg" />
-          <ProjectCard num="P.03" label="Collaboration / 共同制作" title="Artist Collaboration Series" cls="img-ph-2"
-            desc="現代美術作家・小枝繁昭氏のライフワークプロジェクト、108人のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試み。（2026年〜）" />
+          <ProjectCard num="P.03" label="Collaboration / 共同制作" title="小枝繁昭 × 湿板写真"
+            desc="現代美術作家・小枝繁昭氏のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試みです。（2026年〜）"
+            imgSrc="/images/projects/koeda-collab.jpg"
+            href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
           <ProjectCard num="P.04" label="Archive / アーカイブ" title="まどにうつす"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
         </div>
