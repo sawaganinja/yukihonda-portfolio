@@ -20,7 +20,7 @@ const WORKS: WorkItem[] = [
   { id:102, title:'Boy on Tatami', category:'portrait', src:'/images/works/boy-portrait.jpg', height:'420px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:103, title:'Skateboard', category:'wet-plate', src:'/images/works/skateboard.jpg', height:'380px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:2, title:'Portrait of an Artist', category:'wet-plate', src:'/images/works/work4.jpg', height:'420px', labelEn:'Wet Plate' },
-  { id:3, title:'Forest Portrait', category:'film-digital', src:'/images/works/work13.jpg', height:'400px', labelEn:'Film' },
+  { id:3, title:'Spring by the Canal', category:'film-digital', src:'/images/works/work13.jpg', height:'400px', labelEn:'Film' },
   { id:4, title:'Kyoto Street', category:'wet-plate', src:'/images/works/work1.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:201, title:'Family Record', category:'film-digital', src:'/images/works/family-silhouette.jpg', height:'360px', labelEn:'Film' },
   { id:5, title:'Boy in a Field', category:'portrait', src:'/images/works/work11.jpg', height:'380px', labelEn:'Digital' },
@@ -30,7 +30,7 @@ const WORKS: WorkItem[] = [
   { id:8, title:'Canal and Bridge', category:'wet-plate', src:'/images/works/work7.jpg', height:'360px', labelEn:'8×10 Wet Plate (2025)' },
   { id:9, title:'Modernity', category:'wet-plate', src:'/images/works/work3.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film' },
-  { id:10, title:'Spring by the Canal', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film' },
+  { id:10, title:'In the Field', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film' },
 
   { id:12, title:'Garden Elements', category:'wet-plate', src:'/images/works/work5.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:13, title:'Workspace', category:'wet-plate', src:'/images/works/work8.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
