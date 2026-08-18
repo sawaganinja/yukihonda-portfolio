@@ -16,6 +16,8 @@ interface WorkItem {
 
 /* ── Works data ── */
 const WORKS: WorkItem[] = [
+  { id:104, title:'Seated Portrait', category:'portrait', src:'/images/works/portrait-tatami-185.jpg', height:'420px', labelEn:'185×185mm Wet Plate (2026)' },
+  { id:105, title:'Glass Jar Study', category:'wet-plate', src:'/images/works/plum-jar-92.jpg', height:'380px', labelEn:'92×92mm Wet Plate (2026)' },
   { id:101, title:'まどにうつす', category:'wet-plate', src:'/images/works/ohara-landscape.jpg', height:'380px', labelEn:'8×10 Wet Plate (2022)' },
   { id:102, title:'Boy on Tatami', category:'portrait', src:'/images/works/boy-portrait.jpg', height:'420px', labelEn:'140×140mm Wet Plate (2026)' },
   { id:103, title:'Skateboard', category:'wet-plate', src:'/images/works/skateboard.jpg', height:'380px', labelEn:'140×140mm Wet Plate (2026)' },
@@ -24,7 +26,6 @@ const WORKS: WorkItem[] = [
   { id:4, title:'Kyoto Street', category:'wet-plate', src:'/images/works/work1.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:201, title:'Family Record', category:'film-digital', src:'/images/works/family-silhouette.jpg', height:'360px', labelEn:'Film' },
   { id:5, title:'Boy in a Field', category:'portrait', src:'/images/works/work11.jpg', height:'380px', labelEn:'Digital' },
-  { id:6, title:'Landscape Study', category:'wet-plate', src:'/images/works/work2.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:202, title:'Family Record', category:'film-digital', src:'/images/works/family-onbu.jpg', height:'380px', labelEn:'Film' },
   { id:11, title:'Portrait of a Boy', category:'portrait', src:'/images/works/work6.jpg', height:'400px', labelEn:'8×10 Wet Plate (2025)' },
   { id:8, title:'Canal and Bridge', category:'wet-plate', src:'/images/works/work7.jpg', height:'360px', labelEn:'8×10 Wet Plate (2025)' },
@@ -32,7 +33,6 @@ const WORKS: WorkItem[] = [
   { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film' },
   { id:10, title:'In the Field', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film' },
 
-  { id:12, title:'Garden Elements', category:'wet-plate', src:'/images/works/work5.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:13, title:'Workspace', category:'wet-plate', src:'/images/works/work8.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:204, title:'Family Record', category:'film-digital', src:'/images/works/family-water.jpg', height:'380px', labelEn:'Film' },
   { id:14, title:'Portrait of a Girl', category:'wet-plate', src:'/images/works/work9.jpg', height:'420px', labelEn:'8×10 Wet Plate (2025)' },
