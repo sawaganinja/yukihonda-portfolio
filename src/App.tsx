@@ -29,9 +29,9 @@ const WORKS: WorkItem[] = [
   { id:202, title:'Family Record', category:'film-digital', src:'/images/works/family-onbu.jpg', height:'380px', labelEn:'Film' },
   { id:11, title:'Portrait of a Boy', category:'portrait', src:'/images/works/work6.jpg', height:'400px', labelEn:'8×10 Wet Plate (2025)' },
   { id:8, title:'Canal and Bridge', category:'wet-plate', src:'/images/works/work7.jpg', height:'360px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:9, title:'Modernity', category:'wet-plate', src:'/images/works/work3.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
-  { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film' },
-  { id:10, title:'In the Field', category:'film-digital', src:'/images/works/work15.jpg', height:'360px', labelEn:'Film' },
+  { id:203, title:'Family Record', category:'film-digital', src:'/images/works/family-baby.jpg', height:'380px', labelEn:'Film / Digital' },
+  { id:106, title:'Portrait', category:'portrait', src:'/images/works/portrait-92.jpg', height:'420px', labelEn:'92×92mm Wet Plate (2026)' },
+  { id:107, title:'Winter Tree', category:'wet-plate', src:'/images/works/winter-tree.jpg', height:'420px', labelEn:'8×10 Wet Plate (2025)' },
 
   { id:13, title:'Workspace', category:'wet-plate', src:'/images/works/work8.jpg', height:'380px', labelEn:'8×10 Wet Plate (2025)' },
   { id:204, title:'Family Record', category:'film-digital', src:'/images/works/family-water.jpg', height:'380px', labelEn:'Film' },
