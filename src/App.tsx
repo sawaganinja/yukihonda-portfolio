@@ -77,8 +77,8 @@ function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => void })
           <div className="nav__right">
             <div className="nav__links">
               <a href="#services">Services</a>
-              <a href="#works">Works</a>
               <a href="#projects">Projects</a>
+              <a href="#works">Works</a>
               <a href="#about">About</a>
               <a href="#contact" className="nav__contact-btn">Contact</a>
             </div>
@@ -96,8 +96,8 @@ function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => void })
       </nav>
       <div className={`nav__mobile${open ? ' open' : ''}`}>
         <a href="#services"  onClick={close}>Services</a>
-        <a href="#works"     onClick={close}>Works</a>
         <a href="#projects"  onClick={close}>Projects</a>
+        <a href="#works"     onClick={close}>Works</a>
         <a href="#about"     onClick={close}>About</a>
         <a href="#contact"   onClick={close}>Contact</a>
         <button className="theme-toggle" onClick={() => { toggleTheme(); close() }}>
@@ -273,6 +273,7 @@ function Works({ activeFilter }: {
   setActiveFilter?: (f: Filter) => void
 }) {
   const [lightbox, setLightbox] = useState<WorkItem | null>(null)
+  const [showAll, setShowAll] = useState(false)
 
   // Close lightbox on ESC
   useEffect(() => {
@@ -284,6 +285,9 @@ function Works({ activeFilter }: {
   const filtered = activeFilter === 'all'
     ? WORKS
     : WORKS.filter(w => w.category === activeFilter)
+
+  const INITIAL_COUNT = 6
+  const displayedWorks = showAll ? filtered : filtered.slice(0, INITIAL_COUNT)
 
   return (
     <section id="works" className="works section-pad">
@@ -297,25 +301,61 @@ function Works({ activeFilter }: {
         {filtered.length === 0 ? (
           <p className="works__empty">このカテゴリーの作品は近日公開予定です。</p>
         ) : (
-          <div className="works__grid">
-            {filtered.map(work => (
-              <div className="works__item" key={work.id} onClick={() => setLightbox(work)}
-                role="button" tabIndex={0} aria-label={work.title}
-                onKeyDown={e => e.key === 'Enter' && setLightbox(work)}>
-                <div className="works__item-inner">
-                  {/* Placeholder div — replace with <img src={work.src} /> when ready */}
-                  <div
-                    className="works__item-img"
-                    style={{ background: work.src ? `url(${work.src}) center/cover no-repeat` : work.bg, height: work.height }}
-                  />
+          <>
+            <div className="works__grid">
+              {displayedWorks.map(work => (
+                <div className="works__item" key={work.id} onClick={() => setLightbox(work)}
+                  role="button" tabIndex={0} aria-label={work.title}
+                  onKeyDown={e => e.key === 'Enter' && setLightbox(work)}>
+                  <div className="works__item-inner">
+                    {/* Placeholder div — replace with <img src={work.src} /> when ready */}
+                    <div
+                      className="works__item-img"
+                      style={{ background: work.src ? `url(${work.src}) center/cover no-repeat` : work.bg, height: work.height }}
+                    />
+                  </div>
+                  <div className="works__item-overlay">
+                    <p className="works__item-label">{work.labelEn}</p>
+                    <p className="works__item-title">{work.title}</p>
+                  </div>
                 </div>
-                <div className="works__item-overlay">
-                  <p className="works__item-label">{work.labelEn}</p>
-                  <p className="works__item-title">{work.title}</p>
-                </div>
+              ))}
+            </div>
+
+            {filtered.length > INITIAL_COUNT && (
+              <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+                <button
+                  type="button"
+                  onClick={() => setShowAll(v => !v)}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    background: 'transparent',
+                    border: '1px solid var(--border-hov)',
+                    color: 'var(--text)',
+                    padding: '0.85rem 2.2rem',
+                    borderRadius: '2px',
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--rust-red)'
+                    e.currentTarget.style.color = 'var(--rust-red)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'var(--border-hov)'
+                    e.currentTarget.style.color = 'var(--text)'
+                  }}
+                >
+                  {showAll ? 'Show Less ↑' : `View More Works (+${filtered.length - INITIAL_COUNT}) ↓`}
+                </button>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
       </div>
 
@@ -393,16 +433,20 @@ function Projects() {
           <p>アート・プロダクト——<br />現在進行中のプロジェクト群。</p>
         </div>
         <div className="projects__grid">
-          <ProjectCard num="P.01" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
-            desc="正方形の湿板写真。起業家・経営者のアイデンティティをガラスと金属に焼き付ける、唯一無二のハイエンド商材。" comingSoon />
-          <ProjectCard num="P.02" label="Series / シリーズ" title="The Wolf Series"
+          <ProjectCard num="P.01" label="Series / シリーズ" title="The Wolf Series"
             desc="「狼」の不在と気配を追いかけるアートワーク。見えざる物語と深い沈黙を写し出すコア作品群。（2023年〜）" imgSrc="/images/wolf/wolf2.jpg" />
+          <ProjectCard num="P.02" label="Collaboration / 制作サポート" title="Kiana Bates × Tintype"
+            desc="アメリカの写真家・Kiana Bates氏による、真夏の大阪での8×10大判ティンタイプ（湿板写真）制作プロジェクト。京都アトリエでの処方設計・技術サポートおよび現場協働。（2026年）"
+            imgSrc="/images/projects/kiana-tintype.jpg"
+            href="https://note.com/lucky_stork4592/n/nda33b05138bf" />
           <ProjectCard num="P.03" label="Collaboration / 共同制作" title="小枝繁昭 × 湿板写真"
             desc="現代美術作家・小枝繁昭氏のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試みです。（2026年〜）"
             imgSrc="/images/projects/koeda-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
           <ProjectCard num="P.04" label="Archive / アーカイブ" title="まどにうつす"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
+          <ProjectCard num="P.05" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
+            desc="正方形の湿板写真。起業家・経営者のアイデンティティをガラスと金属に焼き付ける、唯一無二のハイエンド商材。" comingSoon />
         </div>
       </div>
     </section>
@@ -543,8 +587,8 @@ export default function App() {
       <main>
         <Hero />
         <Services onViewWork={setWorksFilter} />
-        <Works activeFilter={worksFilter} setActiveFilter={setWorksFilter} />
         <Projects />
+        <Works activeFilter={worksFilter} setActiveFilter={setWorksFilter} />
         <About />
         <Contact />
       </main>
