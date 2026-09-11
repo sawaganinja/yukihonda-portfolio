@@ -388,15 +388,20 @@ function Works({ activeFilter }: {
 }
 
 /* ── Projects ────────────────────────────── */
-function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc, href }: {
-  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string; href?:string
+function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc, href, bgSize, bgPosition }: {
+  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string; href?:string; bgSize?:string; bgPosition?:string
 }) {
   const CardWrapper = href ? 'a' : 'article';
   const linkProps = href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {};
 
   return (
     <CardWrapper className={`project-card ${href ? 'is-link' : ''}`} {...linkProps}>
-      <div className={`project-card__img ${cls || ''}`} style={imgSrc ? { backgroundImage: `url(${imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}>
+      <div className={`project-card__img ${cls || ''}`} style={imgSrc ? {
+        backgroundImage: `url(${imgSrc})`,
+        backgroundSize: bgSize || 'cover',
+        backgroundPosition: bgPosition || 'center',
+        backgroundRepeat: 'no-repeat'
+      } : {}}>
         {!imgSrc && (
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
             style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',opacity:.07 }}>
@@ -443,9 +448,13 @@ function Projects() {
             desc="現代美術作家・小枝繁昭氏のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試みです。（2026年〜）"
             imgSrc="/images/projects/koeda-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
-          <ProjectCard num="P.04" label="Archive / アーカイブ" title="まどにうつす"
+          <ProjectCard num="P.04" label="Collaboration / 共同制作" title="現代浮世絵 × 湿板写真"
+            desc="現代浮世絵師・空次（水縹憂柊）氏との共創。デジタルで描かれた大作『風神雷神』を、1851年の古典技法により3枚のガラス板へと物理的に定着させる試み。（2026年〜）"
+            imgSrc="/images/projects/kuji-collab.jpg"
+            href="https://note.com/lucky_stork4592/n/nac481cea019e" />
+          <ProjectCard num="P.05" label="Archive / アーカイブ" title="まどにうつす"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
-          <ProjectCard num="P.05" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
+          <ProjectCard num="P.06" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
             desc="正方形の湿板写真。起業家・経営者のアイデンティティをガラスと金属に焼き付ける、唯一無二のハイエンド商材。" comingSoon />
         </div>
       </div>
