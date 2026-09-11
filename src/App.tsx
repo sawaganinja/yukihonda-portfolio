@@ -449,7 +449,7 @@ function Projects() {
             imgSrc="/images/projects/koeda-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
           <ProjectCard num="P.04" label="Collaboration / 共同制作" title="現代浮世絵 × 湿板写真"
-            desc="現代浮世絵師・空次（水縹憂柊）氏との共創。デジタルで描かれた大作『風神雷神』を、1851年の古典技法により3枚のガラス板へと物理的に定着させる試み。（2026年〜）"
+            desc="現代浮世絵師・空次氏との共創プロジェクト。大作『風神雷神』のプロトタイプ制作を皮切りに、デジタルの光を1851年の古典技法でガラス板へと定着させ、物質としての新たな表現を探求する試み。（2026年〜）"
             imgSrc="/images/projects/kuji-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nac481cea019e" />
           <ProjectCard num="P.05" label="Archive / アーカイブ" title="まどにうつす"
