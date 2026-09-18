@@ -284,6 +284,51 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:300;line-height:1.15;}
 .menu-row__note{font-size:.72rem;color:var(--text-muted);}
 .menu-row__price{font-size:.72rem;color:var(--text-dim);white-space:nowrap;}
 
+/* Travel fee box inside Premium Anniversary */
+.travel-fee-box{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  padding:1.1rem 1.2rem;
+  border-radius:2px;
+  margin:1.5rem 0 1.8rem;
+}
+.travel-fee-box__title{
+  font-size:.7rem;
+  letter-spacing:.1em;
+  color:var(--text);
+  font-weight:500;
+  margin-bottom:.6rem;
+}
+.travel-fee-box__row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.35rem 0;
+  font-size:.78rem;
+  color:var(--text-dim);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+[data-theme="light"] .travel-fee-box__row{
+  border-bottom:1px solid rgba(0,0,0,.05);
+}
+.travel-fee-box__row:last-of-type{
+  border-bottom:none;
+}
+.travel-fee-box__price{
+  color:var(--text);
+  font-weight:400;
+}
+.travel-fee-box__price--free{
+  color:var(--rust-red);
+  font-weight:500;
+}
+.travel-fee-box__note{
+  font-size:.68rem;
+  color:var(--text-muted);
+  margin-top:.6rem;
+  line-height:1.5;
+}
+
 @media (max-width: 768px) {
   .menu-row {
     flex-direction: column;
@@ -335,12 +380,98 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:300;line-height:1.15;}
 .img-ph-1{background:linear-gradient(135deg,#1e1a17,#2a1f1c);}
 .img-ph-2{background:linear-gradient(135deg,#161b1e,#1c2428);}
 .img-ph-3{background:linear-gradient(135deg,#1a1a1a,#202020);}
+.img-ph-kioku{
+  background: 
+    radial-gradient(ellipse at 65% 45%, rgba(210, 205, 195, 0.12) 0%, transparent 65%),
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(255, 255, 255, 0.035) 3px, rgba(255, 255, 255, 0.035) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255, 255, 255, 0.035) 3px, rgba(255, 255, 255, 0.035) 4px),
+    linear-gradient(135deg, #1c1a18 0%, #111110 50%, #171615 100%);
+}
+
+/* Featured Split Card */
+.project-card--featured{
+  grid-column:span 2;
+  aspect-ratio:auto;
+  min-height:440px;
+  background:#111110;
+}
+.project-card--featured-inner{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  height:100%;
+}
+.project-card--featured-visual{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(1.5rem, 3vw, 2.5rem);
+  background:radial-gradient(ellipse at center, #1a1918 0%, #0d0c0b 100%);
+  overflow:hidden;
+}
+.project-card--featured-visual::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-right:1px solid var(--border);
+}
+.project-card--featured-img{
+  max-width:100%;
+  max-height:380px;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  box-shadow:0 12px 40px rgba(0,0,0,0.6);
+  transition:transform .6s ease;
+}
+.project-card:hover .project-card--featured-img{
+  transform:scale(1.025);
+}
+.project-card--featured-content{
+  padding:clamp(2rem, 4vw, 3.5rem);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  background:linear-gradient(135deg, rgba(24,22,21,0.95), rgba(15,14,13,0.98));
+}
+.project-card--featured-num{
+  position:absolute;
+  top:1.5rem;
+  right:1.5rem;
+  font-size:.65rem;
+  color:rgba(240,237,232,.25);
+  letter-spacing:.15em;
+}
+.project-card--featured-btn{
+  margin-top:1.8rem;
+  font-size:.7rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--rust-red);
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  transition:transform .2s ease, color .2s ease;
+}
+.project-card:hover .project-card--featured-btn{
+  transform:translateX(5px);
+  color:#F0EDE8;
+}
 
 @media(max-width:900px){
   .projects__grid{grid-template-columns:repeat(2,1fr);}
 }
+@media(max-width:768px){
+  .project-card--featured{grid-column:span 2;min-height:auto;}
+  .project-card--featured-inner{grid-template-columns:1fr;}
+  .project-card--featured-visual::after{border-right:none;border-bottom:1px solid var(--border);}
+  .project-card--featured-visual{padding:2rem 1.5rem;}
+  .project-card--featured-img{max-height:320px;}
+  .project-card--featured-content{padding:2rem 1.5rem;}
+}
 @media(max-width:580px){
   .projects__grid{grid-template-columns:1fr;}
+  .project-card--featured{grid-column:span 1;}
 }
 
 /* ── ABOUT ───────────────────────────────── */

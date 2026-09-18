@@ -200,6 +200,27 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
               ご希望のロケーション（お寺や神社など）での記念撮影。（七五三、成人式、ウェディングなど）<br />
               デジタルまたは湿板写真で撮影。
             </p>
+
+            {/* Travel fee box */}
+            <div className="travel-fee-box">
+              <p className="travel-fee-box__title">出張交通費（往復・高速代込）</p>
+              <div className="travel-fee-box__row">
+                <span>京都府（市内・近郊）</span>
+                <span className="travel-fee-box__price travel-fee-box__price--free">無料</span>
+              </div>
+              <div className="travel-fee-box__row">
+                <span>大阪府・滋賀県</span>
+                <span className="travel-fee-box__price">¥5,000</span>
+              </div>
+              <div className="travel-fee-box__row">
+                <span>兵庫県・奈良県</span>
+                <span className="travel-fee-box__price">¥8,000</span>
+              </div>
+              <p className="travel-fee-box__note">
+                ※その他の地域は要相談。有料駐車場を利用する場合は実費別途となります。
+              </p>
+            </div>
+
             <div className="service-card__tags">
               <span className="service-tag">Family / Anniversary</span>
               <span className="service-tag">Location</span>
@@ -388,14 +409,33 @@ function Works({ activeFilter }: {
 }
 
 /* ── Projects ────────────────────────────── */
-function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc, href, bgSize, bgPosition }: {
-  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string; href?:string; bgSize?:string; bgPosition?:string
+function ProjectCard({ num, label, title, desc, cls, comingSoon, imgSrc, href, bgSize, bgPosition, featured }: {
+  num:string; label:string; title:string; desc:string; cls?:string; comingSoon?:boolean; imgSrc?:string; href?:string; bgSize?:string; bgPosition?:string; featured?:boolean
 }) {
   const CardWrapper = href ? 'a' : 'article';
   const linkProps = href ? { href, target: '_blank', rel: 'noopener noreferrer' } : {};
 
+  if (featured && imgSrc) {
+    return (
+      <CardWrapper className="project-card project-card--featured is-link" {...linkProps}>
+        <div className="project-card--featured-inner">
+          <div className="project-card--featured-visual">
+            <img src={imgSrc} alt={title} className="project-card--featured-img" />
+          </div>
+          <div className="project-card--featured-content">
+            <span className="project-card--featured-num">{num}</span>
+            <p className="project-card__label">{label}</p>
+            <h3 className="project-card__title" style={{ fontSize: 'clamp(1.4rem, 2.4vw, 2rem)' }}>{title}</h3>
+            <p className="project-card__desc" style={{ maxWidth: '42ch', fontSize: '0.82rem', lineHeight: 1.8 }}>{desc}</p>
+            <span className="project-card--featured-btn">Read Statement →</span>
+          </div>
+        </div>
+      </CardWrapper>
+    )
+  }
+
   return (
-    <CardWrapper className={`project-card ${href ? 'is-link' : ''}`} {...linkProps}>
+    <CardWrapper className={`project-card ${featured ? 'project-card--featured ' : ''}${href ? 'is-link' : ''}`} {...linkProps}>
       <div className={`project-card__img ${cls || ''}`} style={imgSrc ? {
         backgroundImage: `url(${imgSrc})`,
         backgroundSize: bgSize || 'cover',
@@ -438,23 +478,28 @@ function Projects() {
           <p>アート・プロダクト——<br />現在進行中のプロジェクト群。</p>
         </div>
         <div className="projects__grid">
-          <ProjectCard num="P.01" label="Series / シリーズ" title="The Wolf Series"
+          <ProjectCard num="P.01" label="Artwork / アートワーク" title="記憶の解像"
+            desc="表面の細部を削ぎ落とすことで、対象の本質が立ち現れる。網戸越しのピントの反転と透明なガラス原板を通じて、脳内の記憶像と認識の構造を問いかける表現の核。（2026年〜）"
+            featured={true}
+            imgSrc="/images/projects/kioku-no-kaizo.jpg"
+            href="https://note.com/lucky_stork4592/n/n527430619d13" />
+          <ProjectCard num="P.02" label="Series / シリーズ" title="The Wolf Series"
             desc="「狼」の不在と気配を追いかけるアートワーク。見えざる物語と深い沈黙を写し出すコア作品群。（2023年〜）" imgSrc="/images/wolf/wolf2.jpg" />
-          <ProjectCard num="P.02" label="Collaboration / 制作サポート" title="Kiana Bates × Tintype"
+          <ProjectCard num="P.03" label="Collaboration / 制作サポート" title="Kiana Bates × Tintype"
             desc="アメリカの写真家・Kiana Bates氏による、真夏の大阪での8×10大判ティンタイプ（湿板写真）制作プロジェクト。京都アトリエでの処方設計・技術サポートおよび現場協働。（2026年）"
             imgSrc="/images/projects/kiana-tintype.jpg"
             href="https://note.com/lucky_stork4592/n/nda33b05138bf" />
-          <ProjectCard num="P.03" label="Collaboration / 共同制作" title="小枝繁昭 × 湿板写真"
+          <ProjectCard num="P.04" label="Collaboration / 共同制作" title="小枝繁昭 × 湿板写真"
             desc="現代美術作家・小枝繁昭氏のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試みです。（2026年〜）"
             imgSrc="/images/projects/koeda-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
-          <ProjectCard num="P.04" label="Collaboration / 共同制作" title="現代浮世絵 × 湿板写真"
+          <ProjectCard num="P.05" label="Collaboration / 共同制作" title="現代浮世絵 × 湿板写真"
             desc="現代浮世絵師・空次氏との共創プロジェクト。大作『風神雷神』のプロトタイプ制作を皮切りに、デジタルの光を1851年の古典技法でガラス板へと定着させ、物質としての新たな表現を探求する試み。（2026年〜）"
             imgSrc="/images/projects/kuji-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nac481cea019e" />
-          <ProjectCard num="P.05" label="Archive / アーカイブ" title="まどにうつす"
+          <ProjectCard num="P.06" label="Archive / アーカイブ" title="まどにうつす"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
-          <ProjectCard num="P.06" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
+          <ProjectCard num="P.07" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
             desc="正方形の湿板写真。起業家・経営者のアイデンティティをガラスと金属に焼き付ける、唯一無二のハイエンド商材。" comingSoon />
         </div>
       </div>
