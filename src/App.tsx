@@ -205,8 +205,12 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
             <div className="travel-fee-box">
               <p className="travel-fee-box__title">出張交通費（往復・高速代込）</p>
               <div className="travel-fee-box__row">
-                <span>京都府（市内・近郊）</span>
+                <span>京都市内</span>
                 <span className="travel-fee-box__price travel-fee-box__price--free">無料</span>
+              </div>
+              <div className="travel-fee-box__row">
+                <span>京都市外</span>
+                <span className="travel-fee-box__price">¥5,000〜¥8,000</span>
               </div>
               <div className="travel-fee-box__row">
                 <span>大阪府・滋賀県</span>
