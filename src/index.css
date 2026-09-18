@@ -284,6 +284,43 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:300;line-height:1.15;}
 .menu-row__note{font-size:.72rem;color:var(--text-muted);}
 .menu-row__price{font-size:.72rem;color:var(--text-dim);white-space:nowrap;}
 
+/* Plan specs inside Service Card */
+.plan-specs{
+  margin:1.2rem 0 1rem;
+  padding:0.9rem 1.1rem;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-left:2px solid var(--rust-red);
+  border-radius:2px;
+}
+.plan-specs__item{
+  font-size:.8rem;
+  color:var(--text);
+  line-height:1.7;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+}
+.plan-specs__item + .plan-specs__item{
+  margin-top:.35rem;
+}
+.plan-specs__dot{
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:var(--rust-red);
+  flex-shrink:0;
+}
+.plan-specs__label{
+  color:var(--text-dim);
+  font-size:.75rem;
+  min-width:4.8rem;
+}
+.plan-specs__val{
+  color:var(--text);
+  font-size:.78rem;
+}
+
 /* Travel fee box inside Premium Anniversary */
 .travel-fee-box{
   background:var(--bg-card);

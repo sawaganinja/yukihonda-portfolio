@@ -201,6 +201,20 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
               デジタルまたは湿板写真で撮影。
             </p>
 
+            {/* Plan specs */}
+            <div className="plan-specs">
+              <div className="plan-specs__item">
+                <span className="plan-specs__dot" />
+                <span className="plan-specs__label">撮影時間</span>
+                <span className="plan-specs__val">1.5時間まで（長時間の場合は追加あり）</span>
+              </div>
+              <div className="plan-specs__item">
+                <span className="plan-specs__dot" />
+                <span className="plan-specs__label">納品内容</span>
+                <span className="plan-specs__val">厳選データ50カット以上お渡し</span>
+              </div>
+            </div>
+
             {/* Travel fee box */}
             <div className="travel-fee-box">
               <p className="travel-fee-box__title">出張交通費（往復・高速代込）</p>
