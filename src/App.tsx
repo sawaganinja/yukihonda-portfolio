@@ -208,10 +208,13 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
                 <span className="plan-specs__label">撮影時間</span>
                 <span className="plan-specs__val">1.5時間まで（長時間の場合は追加あり）</span>
               </div>
-              <div className="plan-specs__item">
-                <span className="plan-specs__dot" />
+              <div className="plan-specs__item" style={{ alignItems: 'flex-start' }}>
+                <span className="plan-specs__dot" style={{ marginTop: '0.45rem' }} />
                 <span className="plan-specs__label">納品内容</span>
-                <span className="plan-specs__val">厳選データ50カット以上お渡し</span>
+                <div className="plan-specs__val" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <span>デジタル：厳選データ50カット以上お渡し</span>
+                  <span>湿板写真：1カット（92.5×92.5mm）</span>
+                </div>
               </div>
             </div>
 
