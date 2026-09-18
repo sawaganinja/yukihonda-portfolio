@@ -211,9 +211,10 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
               <div className="plan-specs__item" style={{ alignItems: 'flex-start' }}>
                 <span className="plan-specs__dot" style={{ marginTop: '0.45rem' }} />
                 <span className="plan-specs__label">納品内容</span>
-                <div className="plan-specs__val" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                  <span>デジタル：厳選データ50カット以上お渡し</span>
-                  <span>湿板写真：1カット（92.5×92.5mm）</span>
+                <div className="plan-specs__val" style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                  <span style={{ fontSize: '0.7rem', color: 'var(--rust-red)', letterSpacing: '0.05em' }}>※デジタル または 湿板写真のいずれか選択</span>
+                  <span>・デジタル：厳選データ50カット以上お渡し</span>
+                  <span>・湿板写真：1カット（92.5×92.5mm）</span>
                 </div>
               </div>
             </div>
