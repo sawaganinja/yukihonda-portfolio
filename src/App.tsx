@@ -221,7 +221,7 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
                 <span className="travel-fee-box__price">¥8,000</span>
               </div>
               <p className="travel-fee-box__note">
-                ※その他の地域は要相談。有料駐車場を利用する場合は実費別途となります。
+                ※上記価格はあくまで目安です。その他の地域は要相談。有料駐車場を利用する場合は実費別途となります。
               </p>
             </div>
 
