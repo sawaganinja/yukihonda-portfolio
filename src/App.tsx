@@ -136,7 +136,9 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
   return (
     <section id="services" className="services section-pad">
       <div className="container">
-        <p className="section-label">Services / 撮影依頼</p>
+        <p className="section-label">
+          Services / 撮影依頼 <span style={{ fontSize: '0.7rem', opacity: 0.65, fontWeight: 'normal', letterSpacing: '0.04em' }}>（※表記価格は税別）</span>
+        </p>
         <h2 style={{ fontSize:'clamp(2rem,4vw,3.5rem)', fontWeight:300 }}>
           Portraits through<br />
           <em style={{ fontStyle:'italic', color:'var(--rust-red)' }}>chemistry &amp; light</em>
@@ -181,6 +183,7 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
                   </div>
                 ))}
                 <p className="menu-note">
+                  ※ 表記価格は税別となります（別途消費税を申し受けます）。<br />
                   ※ 日程、料金の詳細などはフォームよりご連絡ください。<br />
                   撮影会・出張等も承ります。
                 </p>
@@ -239,7 +242,8 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
                 <span className="travel-fee-box__price">¥8,000</span>
               </div>
               <p className="travel-fee-box__note">
-                ※上記価格はあくまで目安です。その他の地域は要相談。有料駐車場を利用する場合は実費別途となります。
+                ※ 表記価格はすべて税別となります（別途消費税を申し受けます）。<br />
+                ※ 上記価格はあくまで目安です。その他の地域は要相談。有料駐車場を利用する場合は実費別途となります。
               </p>
             </div>
 
@@ -301,6 +305,9 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
                     <p className="menu-row__price">{item.price}</p>
                   </div>
                 ))}
+                <p className="menu-note">
+                  ※ 表記価格は税別となります（別途消費税を申し受けます）。
+                </p>
               </div>
             </div>
           </div>
