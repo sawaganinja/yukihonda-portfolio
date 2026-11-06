@@ -144,6 +144,34 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
           <em style={{ fontStyle:'italic', color:'var(--rust-red)' }}>chemistry &amp; light</em>
         </h2>
 
+        {/* Exhibition / Visitor Guide Banner */}
+        <div style={{
+          marginTop: '2rem',
+          padding: '1.25rem 1.5rem',
+          background: 'var(--bg-card)',
+          border: '1px solid var(--border)',
+          borderLeft: '3px solid var(--rust-red)',
+          borderRadius: '2px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.6rem',
+        }}>
+          <p style={{ fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--rust-red)', fontWeight: 500 }}>
+            Exhibition &amp; Commission Guide / 展示をご覧いただいた皆さまへ
+          </p>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text)', lineHeight: 1.8 }}>
+            現代浮世絵師 水縹憂柊（みなはだ ゆうしゅう）こと空次氏の個展（西福寺）にて展示中の<strong>「肖像ガラス湿板写真」</strong>や<strong>『硝子浮世絵三枚絵』</strong>をご覧いただきありがとうございます。同じ木製大判カメラと100年前のレンズを用いたガラス湿板写真（一点制作）をはじめ、デジタルによるポートレートや記念撮影、作品のガラス湿板化（特注制作）を承っております。
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.2rem' }}>
+            <a href="#contact" style={{ fontSize: '0.75rem', color: 'var(--rust-red)', letterSpacing: '0.08em', borderBottom: '1px solid var(--rust-red)' }}>
+              撮影・特注制作のお問い合わせはこちら →
+            </a>
+            <a href="https://note.com/lucky_stork4592/n/na8e1086d7be7" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.75rem', color: 'var(--text-dim)', letterSpacing: '0.06em', borderBottom: '1px solid var(--border-hov)' }}>
+              制作の舞台裏（note記事）を読む ↗
+            </a>
+          </div>
+        </div>
+
         <div className="services__grid">
           {/* Wide: Executive Portrait */}
           <div className="service-card service-card--wide">
@@ -522,10 +550,10 @@ function Projects() {
             desc="現代美術作家・小枝繁昭氏のポートレートシリーズの一部を湿板写真でご一緒します。表現者同士の対話を通じ、対象の圧倒的な「気配」を湿板写真としてガラスに共同で定着させる試みです。（2026年〜）"
             imgSrc="/images/projects/koeda-collab.jpg"
             href="https://note.com/lucky_stork4592/n/nfb906fb56d7f" />
-          <ProjectCard num="P.05" label="Collaboration / 共同制作" title="現代浮世絵 × 湿板写真"
-            desc="現代浮世絵師・空次氏との共創プロジェクト。大作『風神雷神』のプロトタイプ制作を皮切りに、デジタルの光を1851年の古典技法でガラス板へと定着させ、物質としての新たな表現を探求する試み。（2026年〜）"
+          <ProjectCard num="P.05" label="Collaboration / 共同制作・特注" title="現代浮世絵 × 湿板写真"
+            desc="現代浮世絵師 水縹憂柊（みなはだ ゆうしゅう）こと空次氏との共創プロジェクト。『硝子浮世絵三枚絵』および湿板ポートレートを西福寺にて展示。デジタルの光を1851年の古典技法でガラス板へと定着させる特注制作も承ります。（2026年〜）"
             imgSrc="/images/projects/kuji-collab.jpg"
-            href="https://note.com/lucky_stork4592/n/nac481cea019e" />
+            href="https://note.com/lucky_stork4592/n/na8e1086d7be7" />
           <ProjectCard num="P.06" label="Archive / アーカイブ" title="まどにうつす"
             desc="取り壊しが決まった地元の古い公民館。かつてそこにあった日常の記憶を、建物の窓ガラスそのものへ湿板写真として定着させ、物質として後世に残すドキュメンタリー・プロジェクト。（2022年）" imgSrc="/images/projects/madoniutsusu.jpg" href="https://note.com/lucky_stork4592/n/ne09e975f4dfd" />
           <ProjectCard num="P.07" label="Product / プロダクト" title="Pixelplate" cls="img-ph-1"
@@ -559,7 +587,7 @@ function About() {
             </p>
             <p className="about__bio">
               経営者・アーティスト向けのポートレート撮影からファミリーフォト、独自のアート作品制作まで、
-              写真の可能性を多角的に展開中。プロフォトグラファー歴18年。湿板写真歴8年。
+              写真の可能性を多角的に展開中。
             </p>
             <div className="about__brand">
               <h3 className="about__brand-title">蟹と狼<span style={{ color:'var(--rust-red)' }}>.art</span></h3>
@@ -620,7 +648,8 @@ function Contact() {
                     <option>Standard Session（デジタルポートレート）</option>
                     <option>Wet Plate Session（湿板ポートレート）</option>
                     <option>Pixelplate（デジタル＆アナログ）</option>
-                    <option>Premium Anniversary（記念撮影）</option>
+                    <option>Premium Anniversary（記念撮影・お寺や神社への出張等）</option>
+                    <option>作品・デジタルアートのガラス湿板化（コラボ・特注制作）</option>
                     <option>その他（ご質問・プロジェクト相談等）</option>
                   </select>
                 </div>
