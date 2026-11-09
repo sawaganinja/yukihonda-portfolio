@@ -144,34 +144,6 @@ function Services({ onViewWork }: { onViewWork: (f: Filter) => void }) {
           <em style={{ fontStyle:'italic', color:'var(--rust-red)' }}>chemistry &amp; light</em>
         </h2>
 
-        {/* Exhibition / Visitor Guide Banner */}
-        <div style={{
-          marginTop: '2rem',
-          padding: '1.25rem 1.5rem',
-          background: 'var(--bg-card)',
-          border: '1px solid var(--border)',
-          borderLeft: '3px solid var(--rust-red)',
-          borderRadius: '2px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.6rem',
-        }}>
-          <p style={{ fontSize: '0.7rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--rust-red)', fontWeight: 500 }}>
-            Exhibition &amp; Commission Guide / 展示をご覧いただいた皆さまへ
-          </p>
-          <p style={{ fontSize: '0.85rem', color: 'var(--text)', lineHeight: 1.8 }}>
-            現代浮世絵師 水縹憂柊（みなはだ ゆうしゅう）こと空次氏の個展（西福寺）にて展示中の<strong>「肖像ガラス湿板写真」</strong>や<strong>『硝子浮世絵三枚絵』</strong>をご覧いただきありがとうございます。同じ木製大判カメラと100年前のレンズを用いたガラス湿板写真（一点制作）をはじめ、デジタルによるポートレートや記念撮影、作品のガラス湿板化（特注制作）を承っております。
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.2rem' }}>
-            <a href="#contact" style={{ fontSize: '0.75rem', color: 'var(--rust-red)', letterSpacing: '0.08em', borderBottom: '1px solid var(--rust-red)' }}>
-              撮影・特注制作のお問い合わせはこちら →
-            </a>
-            <a href="https://note.com/lucky_stork4592/n/na8e1086d7be7" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.75rem', color: 'var(--text-dim)', letterSpacing: '0.06em', borderBottom: '1px solid var(--border-hov)' }}>
-              制作の舞台裏（note記事）を読む ↗
-            </a>
-          </div>
-        </div>
-
         <div className="services__grid">
           {/* Wide: Executive Portrait */}
           <div className="service-card service-card--wide">
